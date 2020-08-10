@@ -1,5 +1,6 @@
 import React from "react";
 import TodoListItem from "./todo-list-item";
+import './todo-list.sass';
 
 const TodoList = ({ todos }) => {
   const elements = todos.map((item) => {
@@ -7,12 +8,12 @@ const TodoList = ({ todos }) => {
     const { id, ...itemProps } = item;
 
     return (
-      <li key={ id }><TodoListItem { ...itemProps }></TodoListItem></li>
+      <li className="list-group-item todo-list__item" key={ id }><TodoListItem { ...itemProps }></TodoListItem></li>
     );
   });
 
   return (
-    <ul>
+    <ul className="list-group todo-list">
       { elements }
     </ul>
   );
