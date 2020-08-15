@@ -4,20 +4,34 @@ import './todo-list-item.sass';
 
 export default class TodoListItem extends Component {
 
+  state = {
+    done: false
+  };
+
   onLabelClick = () => {
-    console.log(`Done: ${ this.props.label }`)
+    this.setState({
+      done: true
+    })
   }
 
   render() {
     const { label, important = false } = this.props;
+
+    const { done } = this.state;
 
     const style = {
       color: important ? 'steelblue' : 'black',
       fontWeight: important ? 'bold' : 'normal'
     };
 
+    let classNames = 'todo-list-item'
+
+    if(done) {
+      classNames += ' done'
+    }
+
     return (
-      <div className="todo-list-item">
+      <div className={ classNames }>
         <span
           className="todo-list-item__label"
           style={ style }
