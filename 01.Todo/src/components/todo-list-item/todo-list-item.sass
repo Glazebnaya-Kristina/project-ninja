@@ -1,0 +1,22 @@
+.todo-list-item
+  $this: &
+  font-size: 1.25rem
+
+  &.done
+    #{$this}__label
+      text-decoration: line-through
+
+  &.important
+    #{$this}__label
+      font-weight: bold
+      color: steelblue
+
+  &__label
+    margin-left: 1.25rem
+    line-height: 35px
+    cursor: pointer
+    user-select: none
+
+  &__button
+    width: 35px
+    margin: 3px
