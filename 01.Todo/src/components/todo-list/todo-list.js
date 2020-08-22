@@ -1,6 +1,6 @@
-import React from "react";
-import TodoListItem from "../todo-list-item";
+import React from 'react';
 import './todo-list.sass';
+import TodoListItem from '../todo-list-item';
 
 const TodoList = ({ todos, onDeleted, onToggleDone, onToggleImportant }) => {
   const elements = todos.map((item) => {

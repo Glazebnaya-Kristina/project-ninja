@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./item-add-form.sass";
+import './item-add-form.sass';
 
 export default class ItemAddForm extends Component {
 
